@@ -1,0 +1,19 @@
+  <div  class="panel panel-default" style="margin-bottom:10%" >
+    <div class="panel-heading"style="text-align:center;background-color:black;color:white"><strong>HOSPITALS NEAR ME</strong></div>
+    <div class="panel-body" style="text-align:justify;background-color:white;color:black">
+   <table class="table">
+    <thead>
+      <tr>
+        <th>HOSPITAL NAME</th>
+        <th>DISTANCE</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for each in hospitals %}
+      <tr>
+        <td>{{ each }}</td>
+        <td>{{ hospitals[each] }}</td>
+      </tr>
+      {% endfor %}
+</div>	 
+  </div>

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% if session['logged_in'] %}
+<p>You're logged in already!</p>
+{% else %}
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="/signup" method="POST">
+					<span class="login100-form-title p-b-26">
+						Welcome
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid name is: a b">
+						<input class="input100" type="text" name="name">
+						<span class="focus-input100" data-placeholder="Full Name"></span>
+					</div>
+
+					<div class="wrap-input100" >
+						<input class="input100" type="date" name="birthday">
+						<span class="focus-input100" data-placeholder="Date Of Birth"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="text" name="email">
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
+
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="password">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn" value="Log in" type="submit">
+							 Sign Up
+							</button>
+						</div>
+					</div>
+
+					<div class="text-center p-t-115">
+						<span class="txt1">
+							Do you have an account?
+						</span>
+
+						<a class="txt2" href="/index">
+							Sign in
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+ 
+{% endif %}
+{% endblock %}

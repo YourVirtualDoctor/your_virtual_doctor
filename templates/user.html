@@ -1,0 +1,31 @@
+
+
+{% block user %}
+
+
+
+ <div class="card hovercard">
+                <div class="cardheader">
+                </div>
+                <div class="avatar">
+                    <img alt="" src="https://en.gravatar.com/userimage/133462483/1f86bb7502f434b1a57de5b726564384.jpg">
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <a target="_blank" href="#">{{ user.name }}</a>
+                    </div>
+                    <div class="desc"> {{ user.email }}</div>
+                    <div class="desc"> {{ user.birthday }}</div>
+                </div>
+
+    {% block location %}
+    <h4 style="text-align:center"> Location </h1>
+    {% include 'location.html' %}
+    {% endblock %}
+
+    <div style="margin-top:5%" ></div>
+  </div>
+
+
+
+{% endblock %}

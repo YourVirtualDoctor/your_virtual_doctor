@@ -1,0 +1,18 @@
+  <div  class="panel panel-default" style="margin-bottom:10%" >
+      <div class="panel-heading"style="text-align:center;background-color:black;color:white"><strong>INFORMATION PANNEL</strong></div>
+    <div class="panel-body" style="text-align:justify;background-color:white;color:black">
+    {% if description %}
+	<div>
+	<p style="text-align:justify;padding:2" > 
+	{{ description }}
+        </p>
+	</div>
+    {% else %}
+    <h4> <strong>Disease </strong></h4>
+    <p style="text-align:justify;padding:2" > 
+A disease is a particular abnormal condition that affects part or all of an organism not caused by external force (see 'injury') and that consists of a disorder of a structure or function, usually serving as an evolutionary disadvantage. The study of disease is called pathology, which includes the study of cause. Disease is often construed as a medical condition associated with specific symptoms and signs. It may be caused by external factors such as pathogens or by internal dysfunctions, particularly of the immune system, such as an immunodeficiency, or by a hypersensitivity, including allergies and autoimmunity.
+    </p>
+    {% endif %}
+
+</div>	 
+  </div>

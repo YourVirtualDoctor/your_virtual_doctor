@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	{% block meta %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% endblock %}
+
+	<title>{% block title %}Health{% endblock %}</title>
+
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/style.css" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/static/css/profile.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+{% endblock %}
+
+
+</head>
+
+ <body>
+
+    <div class="container-fluid">
+    <div class = "row" >
+
+    <div class="col-sm-12" style="background-color:white;">
+    {%  block navigation %}
+    {% include 'nav.html' %}
+    {% endblock %}
+
+    
+    <div class="col-sm-4" style="background-color:white;">
+    {% block user %}
+    {% include 'user.html' %}
+    {% endblock %}
+
+
+    </div>
+
+
+
+    <div class="col-sm-4" style="background-color:white">
+    {% block body %}
+    {% include 'main.html' %}
+    {% endblock %}
+    </div>
+
+
+
+    <div class="col-md-4" style="background-color:white;">
+    {% block wiki %}
+    {% include 'wiki.html' %}
+    {% endblock %}
+
+
+    {% block hospitals %}
+    {% include 'hospitals.html' %}
+    {% endblock %}
+
+
+    </div>
+
+
+
+
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+{% block javascripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endblock %}
+
+</body>
+</html>

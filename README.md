@@ -5,7 +5,7 @@ To create a personalized doctor for every internet user, it has the knowledge to
 
 Clone the repository
 
-$ git clone https://github.com/sampathgogineni/your_virtual_doctor.git
+$ git clone https://github.com/YourVirtualDoctor/your_virtual_doctor.git
 
 Create a Virtual Environment (Optional) : https://docs.python.org/3/tutorial/venv.html
 

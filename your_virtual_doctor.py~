@@ -94,9 +94,9 @@ def signup():
     s = Session()
     s.add(user)
     session['logged_in'] = True
-    session['name'] =  result.username
-    session['email'] =  result.email
-    session['birthday'] =  result.birthday
+    session['name'] =  request.form['name']
+    session['email'] =  request.form['email']
+    session['birthday'] =  request.form['birthday']
     session['latitude'] = "42.7282084"
     session['longitude'] = "-84.48165440000001"
     s.commit()
@@ -149,7 +149,6 @@ def symptom():
 					description = "Wikipedia Doesnt Have information on this"
 				break
 	 hospitals = gethospitals()
-	 print hospitals
          return render_template('profile.html' , user=user, questions=questions, symptoms = symptoms, disease= disease, description = description, hospitals = hospitals) 
 
 
@@ -191,7 +190,6 @@ def test():
     query = s.query(User).filter(User.username.in_([POST_USERNAME]), User.password.in_([POST_PASSWORD]) )
     result = query.first()
     if result:
-	print(result.username)
         return "Object found"
     else:
         return "Object not found " + POST_USERNAME + " " + POST_PASSWORD

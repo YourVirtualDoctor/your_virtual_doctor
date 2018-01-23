@@ -1,0 +1,1 @@
+web: gunicorn your_virtual_doctor.wsgi --log-file -
